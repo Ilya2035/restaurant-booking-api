@@ -1,5 +1,3 @@
-"""Session dependency for FastAPI."""
-
 from app.db.session import new_session
 
 

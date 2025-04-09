@@ -1,8 +1,8 @@
-"""Database engine creation."""
-
 from sqlalchemy.ext.asyncio import create_async_engine
 
+from app.core.config import settings
+
 engine = create_async_engine(
-    "sqlite+aiosqlite:///tronchecker.db",  # Заменишь на env-переменную позже
+    settings.DATABASE_URL,
     echo=False,
 )
