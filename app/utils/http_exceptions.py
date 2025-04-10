@@ -12,6 +12,9 @@ def http_exception_wrapper(status_code=400):
             except ValueError as e:
                 raise HTTPException(status_code=status_code, detail=str(e))
             except IntegrityError as e:
-                raise HTTPException(status_code=400, detail="Переданные данные не проходят валидацию")
+                raise HTTPException(
+                    status_code=400,
+                    detail="Переданные данные не проходят валидацию или обьект уже создан"
+                )
         return wrapper
     return decorator
