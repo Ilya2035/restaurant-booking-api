@@ -4,6 +4,7 @@ from app.db.init import init_db
 from app.api.table import router_table
 from app.api.reservation import router_reservations
 
+
 app = FastAPI(title="resturant_booking")
 
 
